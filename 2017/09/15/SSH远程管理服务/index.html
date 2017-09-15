@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="SSH," />
 
 
 
@@ -94,13 +94,22 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Mkv4&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="SSH 简介 SSH（安全外壳协议） 为Secure Shell的缩写，SSH为建立在应用层和传输层基础上的安全协议。 telnet这以远程管理协议为明文传输，危害极大。 tcpdump -i eth0 -nnX port 21  来抓取流量 ps aux | grep sshd 查看ssh进程 netstat -tlun | grep 22 查看22端口  SSH端口 SSH端口：22 Linu">
+<meta name="keywords" content="SSH">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SSH基础">
+<meta property="og:url" content="http://yoursite.com/2017/09/15/SSH远程管理服务/index.html">
 <meta property="og:site_name" content="Mkv4&#39;s Blog">
+<meta property="og:description" content="SSH 简介 SSH（安全外壳协议） 为Secure Shell的缩写，SSH为建立在应用层和传输层基础上的安全协议。 telnet这以远程管理协议为明文传输，危害极大。 tcpdump -i eth0 -nnX port 21  来抓取流量 ps aux | grep sshd 查看ssh进程 netstat -tlun | grep 22 查看22端口  SSH端口 SSH端口：22 Linu">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://ow08tn2rq.bkt.clouddn.com/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.png">
+<meta property="og:image" content="http://ow08tn2rq.bkt.clouddn.com/ssh%E5%AE%89%E5%85%A8%E5%A4%96%E5%A3%B3%E5%8D%8F%E8%AE%AE.png">
+<meta property="og:image" content="http://ow08tn2rq.bkt.clouddn.com/%E5%85%AC%E9%92%A5%E7%99%BB%E9%99%86.png">
+<meta property="og:updated_time" content="2017-09-15T04:12:06.467Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mkv4&#39;s Blog">
+<meta name="twitter:title" content="SSH基础">
+<meta name="twitter:description" content="SSH 简介 SSH（安全外壳协议） 为Secure Shell的缩写，SSH为建立在应用层和传输层基础上的安全协议。 telnet这以远程管理协议为明文传输，危害极大。 tcpdump -i eth0 -nnX port 21  来抓取流量 ps aux | grep sshd 查看ssh进程 netstat -tlun | grep 22 查看22端口  SSH端口 SSH端口：22 Linu">
+<meta name="twitter:image" content="http://ow08tn2rq.bkt.clouddn.com/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.png">
 
 
 
@@ -129,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/15/SSH远程管理服务/"/>
 
 
 
 
 
-  <title>Mkv4's Blog</title>
+  <title>SSH基础 | Mkv4's Blog</title>
   
 
 
@@ -160,9 +169,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -265,9 +272,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -297,9 +304,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/15/SSH远程管理服务/" itemprop="url">SSH基础</a></h1>
+          <h1 class="post-title" itemprop="name headline">SSH基础</h1>
         
 
         <div class="post-meta">
@@ -382,24 +387,101 @@
       
 
       
-        
-          
-          SSH 简介
-SSH（安全外壳协议）
-为Secure Shell的缩写，SSH为建立在应用层和传输层基础上的安全协议。
-telnet这以远程管理协议为明文传输，危害极大。
-tcpdump -i eth0 -nnX port 21  来抓取流量
-ps aux | grep sshd 查看ssh进程
-n
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/09/15/SSH远程管理服务/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <h2 id="SSH-简介"><a href="#SSH-简介" class="headerlink" title="SSH 简介"></a>SSH 简介</h2><blockquote>
+<h4 id="SSH（安全外壳协议）"><a href="#SSH（安全外壳协议）" class="headerlink" title="SSH（安全外壳协议）"></a>SSH（安全外壳协议）</h4><ol>
+<li>为Secure Shell的缩写，SSH为建立在应用层和传输层基础上的安全协议。</li>
+<li>telnet这以远程管理协议为明文传输，危害极大。</li>
+<li>tcpdump -i eth0 -nnX port 21  来抓取流量</li>
+<li>ps aux | grep sshd 查看ssh进程</li>
+<li>netstat -tlun | grep 22 查看22端口</li>
+</ol>
+<h4 id="SSH端口"><a href="#SSH端口" class="headerlink" title="SSH端口"></a>SSH端口</h4><ol>
+<li>SSH端口：22</li>
+<li>Linux中守护进程：sshd</li>
+<li>安装服务：OpenSSH</li>
+<li>服务端主程序：/usr/sbin/sshd</li>
+<li>客户端主程序：/usr/bin/ssh</li>
+</ol>
+<h4 id="相关配置文件"><a href="#相关配置文件" class="headerlink" title="相关配置文件"></a>相关配置文件</h4><ol>
+<li>服务端配置文件：/etc/ssh/sshd_config</li>
+<li>客户端配置文件：/etc/ssh/ssh_config</li>
+</ol>
+</blockquote>
+<h2 id="SSH加密原理"><a href="#SSH加密原理" class="headerlink" title="SSH加密原理"></a>SSH加密原理</h2><ol>
+<li>文件的属性-&gt;高级-&gt;加密内容以保护数据（只有管理员能打开）</li>
+<li>对称加密算法:加密和解密使用的是同一个密钥，一旦泄露，可能造成撞库攻击</li>
+<li>非对称加密算法：分为公私钥<br><img src="http://ow08tn2rq.bkt.clouddn.com/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.png" alt="非对称加密示意图"></li>
+<li>SSH加密的是网络传输中的数据，本地键盘被记录的情况下被窃取的是没有被加密的数据<br><img src="http://ow08tn2rq.bkt.clouddn.com/ssh%E5%AE%89%E5%85%A8%E5%A4%96%E5%A3%B3%E5%8D%8F%E8%AE%AE.png" alt="SSH安全外壳协议"></li>
+<li>只有第一次访问SSH需要公钥。</li>
+<li><p>通过配置文件修改IP</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim /etc/sysconfig/network-scripts/ifcfg-eth0</div></pre></td></tr></table></figure>
+<ol>
+<li>重启network<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service network restart</div></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="SSH配置文件"><a href="#SSH配置文件" class="headerlink" title="SSH配置文件"></a>SSH配置文件</h2><ol>
+<li>Linux服务器在使用过程中，既是SSH的客户端，也是SSH的服务端。既可以通22端口访问别人作为客户端，也可以允许别人通过22端口访问它，作为服务端，因此存在两个配置文件。<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ssh_config   客户端配置文件</div><div class="line">sshd_config  服务端配置文件</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li><p>配置文件选项</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">Port 22                                 端口</div><div class="line">ListenAddress 0.0.0.0                   监听的IP</div><div class="line">Protocol 2                              SSH版本选择</div><div class="line">HostKey /etc/ssh/ssh_host_rsa_key       私钥保存位置</div><div class="line">ServerKeyBits 1024                      私钥的位数</div><div class="line">SyslogFacility AUTH                     日志记录SSH登陆情况</div><div class="line">LogLeverl INFO                          日志等级</div><div class="line">GSSAPIAuthentication yes                GSSAPI认证</div><div class="line">PermitRootLogin yes                     允许root的ssh登陆</div><div class="line">PubkeyAuthentication yes                是否使用公钥验证</div><div class="line">AuthorizedKeysFile .ssh/authorized_keys 公钥的保存位置</div><div class="line">PasswordAuthentication yes              允许使用密码验证登陆</div><div class="line">PermitEmptyPasswords no                 不允许空密码登陆</div></pre></td></tr></table></figure>
+</li>
+<li><p>ssh登陆日志位置</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/var/<span class="built_in">log</span>/secure</div></pre></td></tr></table></figure>
+</li>
+<li><p>日志记录等级：越高记录的越少，越低记录的越详细</p>
+</li>
+</ol>
+<h2 id="SSH命令介绍"><a href="#SSH命令介绍" class="headerlink" title="SSH命令介绍"></a>SSH命令介绍</h2><ol>
+<li><p>ssh远程登陆</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh root@192.168.199.128</div></pre></td></tr></table></figure>
+</li>
+<li><p>从128主机下载test.txt到本地的root</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">scp root@192.168.199.128:/root/test.txt /root/</div></pre></td></tr></table></figure>
+</li>
+<li><p>上传本地的root下的123文件夹到128主机</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">scp -r /root/123/ root@192.168.199.128/root</div></pre></td></tr></table></figure>
+</li>
+<li><p>Sftp文件传输（文件服务系统）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sftp root@192.168.199.128</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">put /root/<span class="built_in">local</span> /root/remote</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">get /root/remote /root/<span class="built_in">local</span></div></pre></td></tr></table></figure>
+<pre><code>ls  查看服务器端当前目录下文件
+cd  切换服务器目录
+lls 查看本地当前目录下文件
+lcd 切换本地目录
+get 下载
+put 上传
+</code></pre><h2 id="SSH连接工具"><a href="#SSH连接工具" class="headerlink" title="SSH连接工具"></a>SSH连接工具</h2><ul>
+<li>ssh命令：linux-&gt;linux</li>
+<li>连接工具：win-&gt;linux</li>
+<li>SecureCRT</li>
+<li>Xshell</li>
+</ul>
+<h2 id="SSH公钥登陆"><a href="#SSH公钥登陆" class="headerlink" title="SSH公钥登陆"></a>SSH公钥登陆</h2><p><img src="http://ow08tn2rq.bkt.clouddn.com/%E5%85%AC%E9%92%A5%E7%99%BB%E9%99%86.png" alt="公钥登陆"></p>
+<ol>
+<li><p>client生成密钥对，server接收pub生成authorized_keys</p>
+<p> client端</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa</div><div class="line">scp id_rsa.pub root@192.168.199.128:/root</div></pre></td></tr></table></figure>
+<p> server端</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cat id_rsa.pub &gt;&gt; /root/.ssh/authorized_keys</div><div class="line">chmod 600 /root/.ssh/authorized_keys</div></pre></td></tr></table></figure>
+</li>
+<li><p>修改服务器端ssh配置文件</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">RSAAuthentication yes   开启RSA验证</div><div class="line">PubkeyAuthentication yes    是否使用公钥验证</div><div class="line">AuthorizedKeysFile .ssh/authorized_keys    公钥保存的位置</div><div class="line">PasswordAuthentication no      禁止使用密码验证登陆</div></pre></td></tr></table></figure>
+</li>
+<li><p>服务器端关闭SELinux服务</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">vim /etc/selinux/config </div><div class="line">修改SELINUX=disabled</div><div class="line">reboot  重启系统</div><div class="line">service sshd restart 重启SSH服务</div></pre></td></tr></table></figure>
+</li>
+<li><p>远程工具登陆时使用的是私钥</p>
+<p> 腾讯课堂<a href="https://ke.qq.com/teacher/57362523" target="_blank" rel="external">兄弟连-SSH沈超</a>笔记整理</p>
+</li>
+</ol>
+
       
     </div>
     
@@ -414,310 +496,36 @@ n
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/10/Test/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mkv4">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/panda.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Mkv4's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/10/Test/" itemprop="url">Test</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-10T00:55:02+08:00">
-                2017-09-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/SSH/" rel="tag"># SSH</a>
           
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/09/10/Test/" class="leancloud_visitors" data-flag-title="Test">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          
-          
-          
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/09/10/Test/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/10/Test/" rel="next" title="Test">
+                <i class="fa fa-chevron-left"></i> Test
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/09/NewBlog/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mkv4">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/panda.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Mkv4's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/09/NewBlog/" itemprop="url">NewBlog</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-09T01:33:01+08:00">
-                2017-09-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/09/09/NewBlog/" class="leancloud_visitors" data-flag-title="NewBlog">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-          
-          
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/09/09/NewBlog/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -727,145 +535,11 @@ n
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/09/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mkv4">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/panda.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Mkv4's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/09/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-09T00:14:48+08:00">
-                2017-09-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/09/09/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/09/09/hello-world/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -873,6 +547,10 @@ n
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -893,8 +571,17 @@ n
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/panda.jpg"
@@ -970,6 +657,22 @@ n
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#SSH-简介"><span class="nav-number">1.</span> <span class="nav-text">SSH 简介</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#SSH（安全外壳协议）"><span class="nav-number">1.0.1.</span> <span class="nav-text">SSH（安全外壳协议）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SSH端口"><span class="nav-number">1.0.2.</span> <span class="nav-text">SSH端口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#相关配置文件"><span class="nav-number">1.0.3.</span> <span class="nav-text">相关配置文件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSH加密原理"><span class="nav-number">2.</span> <span class="nav-text">SSH加密原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSH配置文件"><span class="nav-number">3.</span> <span class="nav-text">SSH配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSH命令介绍"><span class="nav-number">4.</span> <span class="nav-text">SSH命令介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSH连接工具"><span class="nav-number">5.</span> <span class="nav-text">SSH连接工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSH公钥登陆"><span class="nav-number">6.</span> <span class="nav-text">SSH公钥登陆</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1088,10 +791,10 @@ n
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
